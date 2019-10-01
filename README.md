@@ -108,7 +108,7 @@ Specifically, a hook:
 
 We're going to use hooks in our starter app to build another component that implements the same behavior as the existing `<BatteryContainer>` component.
 
-### 💪 Practice Exercise (5 mins)
+### 💪 Practice Exercise (10 mins)
 
 1. Create a new `<BatteryHookContainer>` function component following best practices.
 
