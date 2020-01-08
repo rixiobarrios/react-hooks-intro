@@ -55,7 +55,7 @@ In addition, `<BatteryContainer>` uses lifecycle methods to register/unregister 
 
 ## Why use React Hooks?
 
-Fact: Hooks don't bring add any additional functionality in React applications.
+First, hooks don't add new features to React.
 
 So, if hooks don't bring any new features to React apps, one might wonder why they've been added to the library.
 
@@ -108,7 +108,7 @@ Specifically, a hook:
 
 We're going to use hooks in our starter app to build another component that implements the same behavior as the existing `<BatteryContainer>` component.
 
-### 💪 Practice Exercise (10 mins)
+### 💪 Practice Exercise (8 mins)
 
 1. Create a new `<BatteryHookContainer>` function component following best practices.
 
@@ -167,11 +167,11 @@ Now let's add a `<button>` to test out the setter function (don't forget to add 
   );
 ```
 
-Cool it works!  Also note how easily we can use the current value of `level` in the `level + .01` expression - no need to worry about providing a function to `setState()` in class components.
+Cool it works!  Also note how easily we can use the current value of `level` in the `level + .01` expression - no need to worry about providing a function to `setState()` when using existing state to update state in class components.
 
 > IMPORTANT: Unlike using `setState()` in class components which merges two objects, calling the setter function **replaces** the current state value with the argument provided.
 
-### 💪 Practice Exercise (1 min)
+### 💪 Practice Exercise (2 min)
 
 It's cleaner and more common to destructure the array returned by `useState()`.
 
@@ -185,7 +185,11 @@ Using destructuring assignment, refactor the following three lines of code:
 
 Into a single line of code.
 
-While we're at it, let's get rid of the `<button>` and React Fragment.
+Also, let's comment out the `<button>` by surrounding it with `{/*  */}` as follows:
+
+```js
+{/* <button onClick={() => setLevel(level + .01)}>Update Level</button> */}
+```
 
 ### Adding Additional State
 
@@ -260,7 +264,7 @@ function BatteryHookContainer() {
 
 > Note: In class components, we would have to implement the `componentDidUpdate()` lifecycle method to run a side effect every render after the initial render.
 
-Let's observe this by adding back that button that calls the `setBatteryData()` setter function - go ahead and copy/paste it:
+Let's observe this by uncommenting the button and modifying it to call the `setBatteryData()` setter function:
 
 ```js
   return (
