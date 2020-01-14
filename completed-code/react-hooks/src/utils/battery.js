@@ -37,7 +37,7 @@ function notifyObservers() {
 }
 
 export function register(callback) {
-  if (observerCallbacks.some(cb => cb === callback)) return;
+  if (observerCallbacks.indexOf(callback) === -1) return;
   observerCallbacks.push(callback);
   if (battery) {
     callback(getBatteryData());
@@ -46,5 +46,5 @@ export function register(callback) {
 
 export function unregister(callback) {
   let idx = observerCallbacks.indexOf(callback);
-  if (idx !== -1) observerCallbacks.slice(idx, 1);
+  if (idx !== -1) observerCallbacks.splice(idx, 1);
 }
