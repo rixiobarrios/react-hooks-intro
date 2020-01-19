@@ -16,11 +16,13 @@ Additional events/properties available but not used in this module:
 let battery;
 const observerCallbacks = [];
 
-async function initBattery() {
-  battery = await navigator.getBattery();
-  battery.addEventListener("levelchange", notifyObservers);
-  battery.addEventListener("chargingchange", notifyObservers);
-  notifyObservers();
+function initBattery() {
+  navigator.getBattery()
+    .then(battery => {
+      battery.addEventListener("levelchange", notifyObservers);
+      battery.addEventListener("chargingchange", notifyObservers);
+      notifyObservers();  
+    });
 }
 
 initBattery();
