@@ -55,7 +55,11 @@ In addition, `<BatteryContainer>` uses lifecycle methods to register/unregister 
 
 ## Why use React Hooks?
 
-First, hooks don't add new features to React.
+React is a very popular framework. It is relatively easy to learn, it has given front end developers more fluid control, and it might even be a tad fun. It is still evolving however so you should expect to hear about new additions to the technology as it gets a larger user base and pain points are identified.
+
+One of those common points of frustration is sharing behaviour and state logic between components. There have been different solutions to this problem over the years, Higher Order Components, Mixins, Render Props, but as of React 16.8 a new API has been added to help mitigate these problems. React Hooks!
+
+Hooks don't add new features to React.
 
 So, if hooks don't bring any new features to React apps, one might wonder why they've been added to the library.
 
