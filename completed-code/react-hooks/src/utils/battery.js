@@ -18,7 +18,8 @@ const observerCallbacks = [];
 
 function initBattery() {
   navigator.getBattery()
-    .then(battery => {
+    .then(result => {
+      battery = result;
       battery.addEventListener("levelchange", notifyObservers);
       battery.addEventListener("chargingchange", notifyObservers);
       notifyObservers();  
@@ -39,7 +40,7 @@ function notifyObservers() {
 }
 
 export function register(callback) {
-  if (observerCallbacks.indexOf(callback) === -1) return;
+  if (observerCallbacks.indexOf(callback) !== -1) return;
   observerCallbacks.push(callback);
   if (battery) {
     callback(getBatteryData());
