@@ -35,7 +35,6 @@ To get set up for this lesson:
 
 - `cd` into the `starter-code/react-hooks` folder for this lesson.
 - Open the project in VS Code: `$ code .`
-- Open a terminal in VS Code (`ctrl + backtick`)
 - Install the Node modules: `$ npm i`
 - Start the React Dev Server: `$ npm start`
 
