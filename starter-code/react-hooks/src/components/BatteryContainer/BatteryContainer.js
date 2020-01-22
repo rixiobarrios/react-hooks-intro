@@ -3,10 +3,14 @@ import Battery from "../Battery/Battery";
 import {register, unregister} from '../../utils/battery';
 
 class BatteryContainer extends Component {
-	state = {
-		level: 0,
-		charging: false
-	};
+	constructor(props) {
+		super(props);
+		this.state = {
+			level: 0,
+			charging: false
+		};		
+	}
+
 
 	updateBattery = ({level, charging}) => {
 		this.setState({level, charging});
