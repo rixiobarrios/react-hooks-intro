@@ -33,7 +33,7 @@ This lesson will cover the use case of hooks and demonstrate how to use the two 
 
 To get set up for this lesson:
 
-- `cd` into the `starter-code/react-hooks` folder for this lesson.
+- `cd` into the `react-hooks-intro/starter-code/react-hooks` folder for this lesson.
 - Open the project in VS Code: `$ code .`
 - Install the Node modules: `$ npm i`
 - Start the React Dev Server: `$ npm start`
